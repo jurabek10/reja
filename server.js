@@ -15,21 +15,26 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 // 4 Routing ga bog'liq kodlar
-// app.get("/", function (req, res) {
-//   res.end("");
+app.post("/create-item", (req, res) => {
+  console.log(req.body);
+  res.json({ test: "succes" });
+});
+
+app.get("/", function (req, res) {
+  res.render("harid");
+});
+
+// app.get("/hello", function (req, res) {
+//   res.end("<h1 style='background: red'>Hello World by John</h1>");
 // });
 
-app.get("/hello", function (req, res) {
-  res.end("<h1 style='background: red'>Hello World by John</h1>");
-});
+// app.get("/gift", function (req, res) {
+//   res.end("<h1>Siz sovg'alar sahifasidasiz</h1>");
+// });
 
-app.get("/gift", function (req, res) {
-  res.end("<h1>Siz sovg'alar sahifasidasiz</h1>");
-});
-
-app.get("/contact", function (req, res) {
-  res.end("<h1>You are in contact page</h1>");
-});
+// app.get("/contact", function (req, res) {
+//   res.end("<h1>You are in contact page</h1>");
+// });
 
 //   Calling server
 const server = http.createServer(app);
