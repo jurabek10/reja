@@ -13,7 +13,6 @@
   width: 1440px;
   height: 1400px;
   display: flex;
-  align-items: center;
   flex-direction: row;
   margin-top: 2px;
 }
@@ -30,7 +29,6 @@
 .main_frame .midd_frame {
   position: relative;
   width: 970px;
-  height: 1259px;
   margin-left: 30px;
   margin-right: 27px;
   display: flex;
@@ -83,7 +81,6 @@
 .main_frame .left_frame .left2 {
   position: relative;
   width: 221px;
-  height: 126px;
   margin-left: 44px;
 }
 
@@ -332,4 +329,116 @@
   letter-spacing: 0%;
   text-align: left;
   text-transform: capitalize;
+}
+
+.midd-frame__top {
+  position: relative;
+  padding-left: 56px;
+  padding-right: 61px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+}
+
+.midd-frame__context {
+  width: 500px;
+}
+
+.midd-frame__title {
+  margin-top: 0;
+  margin-bottom: 17px;
+  color: rgb(43, 43, 43);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 123.6%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.midd-frame__text {
+  margin-top: 0;
+  margin-bottom: 22px;
+  color: rgb(118, 118, 118);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.btn-link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 16px 32px;
+  background-color: rgb(255, 180, 0);
+  border-radius: 5px;
+  color: rgb(43, 43, 43);
+}
+
+.btn-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.btn-text {
+  margin: 0;
+  margin-right: 5px;
+  text-transform: uppercase;
+}
+
+.btn-icon {
+  margin-left: 5px;
+  width: 16px;
+  height: 16px;
+}
+
+.midd-frame__img {
+  width: 326px;
+  height: 446px;
+  object-fit: cover;
+}
+
+.rectangle-blue {
+  position: absolute;
+  left: 370px;
+  top: 330px;
+}
+
+.rectangle-orange {
+  position: absolute;
+  right: 64px;
+  top: 80px;
+}
+
+.circle-orange1 {
+  position: absolute;
+  left: 36px;
+  top: 37px;
+}
+
+.circle-orange2 {
+  position: absolute;
+  left: 540px;
+  bottom: 60px;
+}
+
+.circle-green1 {
+  position: absolute;
+  bottom: 20px;
+  left: 85px;
+}
+
+.circle-green2 {
+  position: absolute;
+  top: 60px;
+  left: 515px;
+}
+
+.triangle-red {
+  position: absolute;
+  right: 40px;
+  bottom: 15px;
 }
