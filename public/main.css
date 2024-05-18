@@ -1,3 +1,4 @@
+/* STYLES OF FRAMES */
 .frame {
   width: 100%;
   height: 100%;
@@ -8,6 +9,7 @@
   background-color: #e5e5e5;
 }
 
+/* MAIN-FRAME */
 .main_frame {
   position: relative;
   width: 1440px;
@@ -16,6 +18,8 @@
   flex-direction: row;
   margin-top: 2px;
 }
+
+/* LEFT-FRAME */
 
 .main_frame .left_frame {
   position: relative;
@@ -36,6 +40,7 @@
   background-color: #e5e5e5;
 }
 
+/* RIGHT-FRAME */
 .main_frame .right_frame {
   position: relative;
   width: 108px;
@@ -67,6 +72,7 @@
   margin-bottom: 29.46px;
 }
 
+/* MARGINER */
 .marginer {
   position: relative;
   width: 220px;
@@ -179,6 +185,7 @@
   color: #2b2b2b;
 }
 
+/* LANGUAGES */
 .languages__info {
   display: flex;
   margin: 0;
@@ -236,6 +243,7 @@
   font-family: "Inter", sans-serif;
 }
 
+/* SKILLS */
 .skills__title {
   margin-top: 0;
   margin-bottom: 15px;
@@ -286,6 +294,8 @@
   font-family: "Inter", sans-serif;
 }
 
+/* EXTRA-SKILLS */
+
 .extra-skills__title {
   margin-top: 0;
   margin-bottom: 15px;
@@ -328,6 +338,7 @@
   text-transform: capitalize;
 }
 
+/* MIDD-FRAME-TOP */
 .midd-frame__top {
   position: relative;
   padding-left: 56px;
@@ -399,6 +410,8 @@
   object-fit: cover;
 }
 
+/* SHAPES IN MIDD-FRAME */
+
 .rectangle-blue {
   position: absolute;
   left: 370px;
@@ -441,6 +454,7 @@
   bottom: 15px;
 }
 
+/* SERVICES */
 .services {
   margin-top: 180px;
   font-family: "Inter", sans-serif;
@@ -541,6 +555,7 @@
   text-transform: uppercase;
 }
 
+/* RIGHT-FRAME */
 .contrast {
   margin-top: 50px;
   margin-bottom: 130px;
@@ -584,7 +599,6 @@
 }
 
 .postion {
-  visibility: hidden;
   position: absolute;
   top: -42px;
   padding: 6px 15px;
@@ -598,10 +612,10 @@
   border-radius: 2px;
 }
 
+/* TRIANGLE-DOWN */
 .triangle-down {
   position: absolute;
   top: -20px;
-  visibility: hidden;
   width: 0;
   height: 0;
   border-left: 9px solid transparent;
@@ -609,54 +623,35 @@
   border-top: 18px solid rgb(43, 43, 43);
 }
 
-.link-wrapper__home:hover .home {
+.visible {
+  visibility: hidden;
+}
+
+.link-wrapper__home:hover .visible {
   visibility: visible;
 }
 
-.link-wrapper__home:hover .triangle-down {
+.link-wrapper__service:hover .visible {
   visibility: visible;
 }
 
-.link-wrapper__service:hover .service {
+.link-wrapper__cv:hover .visible {
   visibility: visible;
 }
 
-.link-wrapper__service:hover .triangle-down {
+.link-wrapper__portfolio:hover .visible {
   visibility: visible;
 }
 
-.link-wrapper__cv:hover .cv {
+.link-wrapper__blog:hover .visible {
   visibility: visible;
 }
 
-.link-wrapper__cv:hover .triangle-down {
+.link-wrapper__contact:hover .visible {
   visibility: visible;
 }
 
-.link-wrapper__portfolio:hover .portfolio {
-  visibility: visible;
-}
-
-.link-wrapper__portfolio:hover .triangle-down {
-  visibility: visible;
-}
-
-.link-wrapper__blog:hover .blog {
-  visibility: visible;
-}
-
-.link-wrapper__blog:hover .triangle-down {
-  visibility: visible;
-}
-
-.link-wrapper__contact:hover .contact {
-  visibility: visible;
-}
-
-.link-wrapper__contact:hover .triangle-down {
-  visibility: visible;
-}
-
+/* PERCENT-LINE */
 .percent-line {
   width: 220px;
   border: 0.5px solid rgb(255, 180, 0);
