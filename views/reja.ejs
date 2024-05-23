@@ -15,7 +15,10 @@
     <div class="container">
       <h1 class="display-4 text-center py-1">Reja va maqsadlar</h1>
 
-      <div class="jumbotron p-3 shadow-sm">
+      <div
+        class="jumbotron p-3 shadow-sm"
+        style="background-color: #fff; border-radius: 8px"
+      >
         <form id="create-form" action="/create-item" method="post">
           <div class="d-flex align-items-center">
             <input
@@ -26,12 +29,23 @@
               autofocus
               style="flex: 1"
             />
-            <button class="btn btn-primary" style="border-radius: 20px">
-              Yangi harid qilish
+            <button
+              class="btn btn-primary"
+              style="border-radius: 20px; margin-left: 20px"
+            >
+              Yangi reja qo'shish
             </button>
           </div>
         </form>
       </div>
+
+      <button
+        id="clean-all"
+        class="btn btn-danger"
+        style="border-radius: 20px; margin-top: 20px"
+      >
+        Hamma rejalarni o'chirish
+      </button>
     </div>
   </body>
 </html>
