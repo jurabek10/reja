@@ -3,8 +3,9 @@ const http = require("http");
 const mongodb = require("mongodb");
 
 let db;
+
 const connectionstring =
-  "mongodb+srv://jurabek:Hostinguz4891@cluster0.3lqcuhg.mongodb.net/";
+  "mongodb+srv://jurabek10:Hostinguz4891@cluster0.mkzpkos.mongodb.net/Plan?retryWrites=true&w=majority&appName=Cluster0";
 
 mongodb.connect(
   connectionstring,
