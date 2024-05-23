@@ -1,4 +1,31 @@
 /*
+B-TASK: 
+
+Shunday function tuzing, u 1ta string parametrga ega bolsin, hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin.
+MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
+*/
+
+function countDigits(a) {
+  let count = 0;
+
+  for (let i = 0; i < a.length; i++) {
+    if (!isNaN(parseInt(a[i]))) {
+      count++;
+    }
+  }
+
+  if (count === 0) {
+    return `There is no number in string`;
+  } else {
+    return count;
+  }
+}
+
+console.log(countDigits("ad2a54y79wet0sfgb9"));
+console.log(countDigits("ad2a54y"));
+console.log(countDigits("I study in MIT12"));
+
+/*
 A-TASK: 
 Shunday 2 parametrli function tuzing, hamda birinchi parametrdagi letterni ikkinchi 
 parametrdagi sozdan qatnashga sonini return qilishi kerak boladi.
@@ -8,29 +35,29 @@ MASALAN countLetter("e", "engineer") 3ni return qiladi.
 
 // JAVOB
 
-function countLetter(a, b) {
-  let count = 0;
-  const lowerLetter = a.toLowerCase();
+// function countLetter(a, b) {
+//   let count = 0;
+//   const lowerLetter = a.toLowerCase();
 
-  for (let i = 0; i < b.length; i++) {
-    if (b[i].toLowerCase() === lowerLetter) {
-      count++;
-    }
-    // else if (!b.includes(lowerLetter)) {
-    //   return `${b} does not include ${a}`;
-    // }
-    else if (count === 0) {
-      return `${b} does not include ${a}`;
-    }
-  }
+//   for (let i = 0; i < b.length; i++) {
+//     if (b[i].toLowerCase() === lowerLetter) {
+//       count++;
+//     }
+//     // else if (!b.includes(lowerLetter)) {
+//     //   return `${b} does not include ${a}`;
+//     // }
+//     else if (count === 0) {
+//       return `${b} does not include ${a}`;
+//     }
+//   }
 
-  return `There are ${count} ${a} letters in the word of ${b}`;
-}
+//   return `There are ${count} ${a} letters in the word of ${b}`;
+// }
 
-console.log(countLetter("a", "ali"));
-console.log(countLetter("a", "eli"));
-console.log(countLetter("e", "engineer"));
-console.log(countLetter("I", "I study in MIT"));
+// console.log(countLetter("a", "ali"));
+// console.log(countLetter("a", "eli"));
+// console.log(countLetter("e", "engineer"));
+// console.log(countLetter("I", "I study in MIT"));
 
 // console.log("Jack Ma maslahtlari");
 
