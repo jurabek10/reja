@@ -26,6 +26,7 @@ document.getElementById("create-form").addEventListener("submit", (e) => {
   axios
     .post("/create-item", { reja: createField.value })
     .then((response) => {
+      // console.log(response);
       document
         .getElementById("item-list")
         .insertAdjacentHTML("beforeend", itemTemplate(response.data));
@@ -40,7 +41,7 @@ document.getElementById("create-form").addEventListener("submit", (e) => {
 
 document.addEventListener("click", function (e) {
   // Delete oper
-  //   console.log(e.target);
+  // console.log(e.target);
   if (e.target.classList.contains("delete-me")) {
     if (confirm("Aniq o'chirmoqchimisiz?")) {
       axios
