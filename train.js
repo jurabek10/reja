@@ -13,10 +13,7 @@ function checkContent(firstString, secondString) {
 
   for (let i = 0; i < toLowerfirstString.length; i++) {
     let index = toLowersecondString.indexOf(toLowerfirstString[i]);
-    if (
-      index === -1 &&
-      toLowerfirstString.length !== toLowersecondString.length
-    ) {
+    if (index === -1) {
       return false;
     } else {
       toLowersecondString =
