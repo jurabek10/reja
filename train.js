@@ -1,60 +1,97 @@
+// D-TASK:
+
+// Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
+// MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
+
+function checkContent(firstString, secondString) {
+  if (firstString.length !== secondString.length) {
+    return false;
+  }
+
+  let toLowerfirstString = firstString.toLowerCase();
+  let toLowersecondString = secondString.toLowerCase();
+
+  for (let i = 0; i < toLowerfirstString.length; i++) {
+    let index = toLowersecondString.indexOf(toLowerfirstString[i]);
+    if (
+      index === -1 &&
+      toLowerfirstString.length !== toLowersecondString.length
+    ) {
+      return false;
+    } else {
+      toLowersecondString =
+        toLowersecondString.slice(0, index) +
+        toLowersecondString.slice(index + 1);
+    }
+  }
+
+  return true;
+}
+
+console.log(checkContent("mitgroup", "gmtiprou"));
+console.log(checkContent("jurabek", "akbeurj"));
+console.log(checkContent("asadbek", "ekbadsa"));
+console.log(checkContent("MIT", "ITM"));
+console.log(checkContent("korea", "eaokq"));
+console.log(checkContent("korea", "eaokqrs"));
+
 // MITASK-C
 
 // Shunday class tuzing tuzing nomi Shop, va uni constructoriga 3 hil mahsulot pass bolsin, hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul. Har bir method ishga tushgan vaqt ham log qilinsin.
 // MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() return hozir 20:40da 4ta non, 5ta lagmon va 2ta cola mavjud! shop.sotish('non', 3) & shop.qabul('cola', 4) & shop.qoldiq() return hozir 20:50da 1ta non, 5ta lagmon va 6ta cola mavjud!
 
-class Shop {
-  constructor(non, lagmon, cola) {
-    this.products = {
-      non: non,
-      lagmon: lagmon,
-      cola: cola,
-    };
-  }
+// class Shop {
+//   constructor(non, lagmon, cola) {
+//     this.products = {
+//       non: non,
+//       lagmon: lagmon,
+//       cola: cola,
+//     };
+//   }
 
-  getCurrentTime() {
-    let now = new Date();
-    let hours = now.getHours();
-    let minutes = now.getMinutes();
-    return `${hours}:${minutes}`;
-  }
+//   getCurrentTime() {
+//     let now = new Date();
+//     let hours = now.getHours();
+//     let minutes = now.getMinutes();
+//     return `${hours}:${minutes}`;
+//   }
 
-  qoldiq() {
-    const { non, lagmon, cola } = this.products;
-    return `Hozir ${this.getCurrentTime()}da ${non} ta non, ${lagmon} ta lagmon va ${cola} ta cola bor.`;
-  }
+//   qoldiq() {
+//     const { non, lagmon, cola } = this.products;
+//     return `Hozir ${this.getCurrentTime()}da ${non} ta non, ${lagmon} ta lagmon va ${cola} ta cola bor.`;
+//   }
 
-  sotish(product, quntity) {
-    let keysArray = Object.keys(this.products);
-    if (!keysArray.includes(product)) {
-      return `Bizda hozir ${product} yo'q`;
-    }
-    if (this.products[product] < quntity) {
-      return `Bizda yetarli miqdorda ${product} yo'q`;
-    }
-    this.products[product] -= quntity;
-    return `Biz ${this.getCurrentTime()}da ${quntity} ta ${product} sotdik`;
-  }
+//   sotish(product, quntity) {
+//     let keysArray = Object.keys(this.products);
+//     if (!keysArray.includes(product)) {
+//       return `Bizda hozir ${product} yo'q`;
+//     }
+//     if (this.products[product] < quntity) {
+//       return `Bizda yetarli miqdorda ${product} yo'q`;
+//     }
+//     this.products[product] -= quntity;
+//     return `Biz ${this.getCurrentTime()}da ${quntity} ta ${product} sotdik`;
+//   }
 
-  qabul(product, quantity) {
-    let keysArray = Object.keys(this.products);
-    if (!keysArray.includes(product)) {
-      return `Bizda hozir ${product} yo'q`;
-    }
-    this.products[product] += quantity;
-    return `Biz ${this.getCurrentTime()}da ${quantity} ta ${product} qabul qildik`;
-  }
-}
+//   qabul(product, quantity) {
+//     let keysArray = Object.keys(this.products);
+//     if (!keysArray.includes(product)) {
+//       return `Bizda hozir ${product} yo'q`;
+//     }
+//     this.products[product] += quantity;
+//     return `Biz ${this.getCurrentTime()}da ${quantity} ta ${product} qabul qildik`;
+//   }
+// }
 
-const shop = new Shop(4, 5, 2);
-console.log(shop.qoldiq());
-console.log(shop.sotish("non", 3));
-console.log(shop.qoldiq());
-console.log(shop.qabul("cola", 3));
-console.log(shop.qoldiq());
-console.log(shop.qabul("pepsi", 3));
-console.log(shop.sotish("lagmon", 3));
-console.log(shop.qoldiq());
+// const shop = new Shop(4, 5, 2);
+// console.log(shop.qoldiq());
+// console.log(shop.sotish("non", 3));
+// console.log(shop.qoldiq());
+// console.log(shop.qabul("cola", 3));
+// console.log(shop.qoldiq());
+// console.log(shop.qabul("pepsi", 3));
+// console.log(shop.sotish("lagmon", 3));
+// console.log(shop.qoldiq());
 
 /*
 
