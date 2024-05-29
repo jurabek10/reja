@@ -1,36 +1,52 @@
+// E-TASK:
+
+// Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+// MASALAN: getReverse("hello") return qilsin "olleh"
+
+function getReverse(a) {
+  let reversedArray = a.split("").reverse();
+  let reversedString = reversedArray.join("").toString();
+  return reversedString;
+}
+
+console.log(getReverse("hello"));
+console.log(getReverse("jurabek"));
+console.log(getReverse("John"));
+console.log(getReverse("MIT"));
+
 // D-TASK:
 
 // Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
 // MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
 
-function checkContent(firstString, secondString) {
-  if (firstString.length !== secondString.length) {
-    return false;
-  }
+// function checkContent(firstString, secondString) {
+//   if (firstString.length !== secondString.length) {
+//     return false;
+//   }
 
-  let toLowerfirstString = firstString.toLowerCase();
-  let toLowersecondString = secondString.toLowerCase();
+//   let toLowerfirstString = firstString.toLowerCase();
+//   let toLowersecondString = secondString.toLowerCase();
 
-  for (let i = 0; i < toLowerfirstString.length; i++) {
-    let index = toLowersecondString.indexOf(toLowerfirstString[i]);
-    if (index === -1) {
-      return false;
-    } else {
-      toLowersecondString =
-        toLowersecondString.slice(0, index) +
-        toLowersecondString.slice(index + 1);
-    }
-  }
+//   for (let i = 0; i < toLowerfirstString.length; i++) {
+//     let index = toLowersecondString.indexOf(toLowerfirstString[i]);
+//     if (index === -1) {
+//       return false;
+//     } else {
+//       toLowersecondString =
+//         toLowersecondString.slice(0, index) +
+//         toLowersecondString.slice(index + 1);
+//     }
+//   }
 
-  return true;
-}
+//   return true;
+// }
 
-console.log(checkContent("mitgroup", "gmtiprou"));
-console.log(checkContent("jurabek", "akbeurj"));
-console.log(checkContent("asadbek", "ekbadsa"));
-console.log(checkContent("MIT", "ITM"));
-console.log(checkContent("korea", "eaokq"));
-console.log(checkContent("korea", "eaokqrs"));
+// console.log(checkContent("mitgroup", "gmtiprou"));
+// console.log(checkContent("jurabek", "akbeurj"));
+// console.log(checkContent("asadbek", "ekbadsa"));
+// console.log(checkContent("MIT", "ITM"));
+// console.log(checkContent("korea", "eaokq"));
+// console.log(checkContent("korea", "eaokqrs"));
 
 // MITASK-C
 
@@ -166,6 +182,7 @@ MASALAN countLetter("e", "engineer") 3ni return qiladi.
 // ];
 
 // // CLLBACK FUNCTIONS
+// (err, data)
 // function maslahatBering(a, callback) {
 //   if (typeof a !== "number") callback("Insert number", null);
 //   else if (a <= 20) callback(null, list[0]);
@@ -176,7 +193,7 @@ MASALAN countLetter("e", "engineer") 3ni return qiladi.
 //   else {
 //     setInterval(function () {
 //       callback(null, list[5]);
-//     }, 5000);
+//     }, 2000);
 //   }
 // }
 
